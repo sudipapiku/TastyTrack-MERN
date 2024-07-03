@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
-import './Cart.css';
-import { StoreContext } from '../../Context/StoreContext';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext } from "react";
+import "./Cart.css";
+import { StoreContext } from "../../Context/StoreContext";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart,getTotalCartAmount } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
+    useContext(StoreContext);
   const navigate = useNavigate();
 
   return (
-    <div className='cart'>
+    <div className="cart">
       <div className="cart-items">
         <div className="cart-items-title">
           <p>Item</p>
@@ -30,7 +31,9 @@ const Cart = () => {
                   <p>$ {item.price}</p>
                   <p>{cartItems[item._id]}</p>
                   <p>$ {item.price * cartItems[item._id]}</p>
-                  <p onClick={() => removeFromCart(item._id)} className='cross'>X</p>
+                  <p onClick={() => removeFromCart(item._id)} className="cross">
+                    X
+                  </p>
                 </div>
                 <hr />
               </div>
@@ -46,32 +49,36 @@ const Cart = () => {
               <p>Subtotal</p>
               <p>$ {getTotalCartAmount()}</p>
             </div>
-            <hr/>
+            <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>$ {getTotalCartAmount()===0?0:2}</p>
+              <p>$ {getTotalCartAmount() === 0 ? 0 : 2}</p>
             </div>
-            <hr/>
+            <hr />
             <div className="cart-total-details">
               <p>Total</p>
-              <p>$ {getTotalCartAmount()===0?0:getTotalCartAmount()+2}</p>
+              <p>
+                $ {getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}
+              </p>
             </div>
-            <hr/>
+            <hr />
           </div>
-          <button onClick={()=>navigate('/order')}>Proceed to Checkout</button>
-          </div>
-          <div className="cart-promocode">
-            <div>
-              <p>If you have a Promocode, Enter it here</p>
-              <div className="cart-promocode-input">
-                <input type="text" placeholder='Promo code' />
-                <button>Submit</button>
-              </div>
+          <button onClick={() => navigate("/order")}>
+            Proceed to Checkout
+          </button>
+        </div>
+        <div className="cart-promocode">
+          <div>
+            <p>If you have a Promocode, Enter it here</p>
+            <div className="cart-promocode-input">
+              <input type="text" placeholder="Promo code" />
+              <button>Submit</button>
             </div>
           </div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default Cart;
