@@ -17,7 +17,6 @@ const Navbar = ({setShowLogin}) => {
       navigate("/");
     }
 
-
   return (
     <div className='navbar'>
        <Link to='/' ><img src={assets.logo} alt="" className='logo'/> </Link>
@@ -38,7 +37,7 @@ const Navbar = ({setShowLogin}) => {
             :<div className='navbar-profile'>
               <img src={assets.profile_icon} alt="" />
               <ul className="nav-profile-dropdown">
-                <li><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
+                <li onClick={()=>navigate("/myorders")} ><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
                 <hr/>
                 <li><img onClick={logout} src={assets.logout_icon} alt="" /><p onClick={logout}>Logout</p></li>
               </ul>
