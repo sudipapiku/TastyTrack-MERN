@@ -1,6 +1,7 @@
 import React, { useEffect ,useState } from 'react'
 import './Footer.css'
 import { assets } from '../../assets/assets';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -15,12 +16,14 @@ const Footer = () => {
     }, []);
 
 
+
+
   return (
     <div className='footer' id='footer'>
         <div className="footer-content">
             <div className="footer-content-left">
                 <img className='logo' src={assets.logo} alt="" />
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                <p>Your go-to app for quick and easy food delivery from top local restaurants. Browse, order, and track your meal effortlessly. Enjoy diverse cuisines and fast, secure service, right to your door.</p>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="" />
                     <img src={assets.twitter_icon} alt="" />
@@ -30,8 +33,8 @@ const Footer = () => {
             <div className="footer-content-center">
                 <h2>COMPANY</h2>
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
+                    <li> <Link to='/'>Home</Link></li>
+                    <li><Link to="/about">About Us</Link></li>
                     <li>Delivery</li>
                     <li>Privacy policy</li>
                 </ul>
@@ -39,7 +42,7 @@ const Footer = () => {
             <div className="footer-content-right">
                 <h2>GET IN TOUCH</h2>
                 <ul>
-                    <li>+91-7029779167</li>
+                    <li>+91-9876543210</li>
                     <li>contact@testytrack.com</li>
                 </ul>
             </div>

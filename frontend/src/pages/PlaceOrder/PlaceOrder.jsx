@@ -20,6 +20,8 @@ const PlaceOrder = () => {
         phone: "",
     });
 
+    const [paymentMethod, setPaymentMethod] = useState("online");
+
     const onChangeHandler = (event) => {
         const name = event.target.name;
         const value = event.target.value;
@@ -118,13 +120,17 @@ const PlaceOrder = () => {
             let response = await axios.post(`${url}/api/order/place`, orderData, {
                 headers: { token },
             });
-            console.log(token);
             if (response.data.success) {
                 const { orderId, amount, key } = response.data;
-                displayRazorpay(orderId, amount, key); // Initiate Razorpay payment
+                if (paymentMethod === "Online") {
+                    displayRazorpay(orderId, amount, key); // Initiate Razorpay payment
+                } else {
+                    navigate("/myorders");
+                }
             } else {
                 alert("Error placing order");
             }
+
         } catch (error) {
             console.error("Error placing order:", error);
             alert("Error placing order. Please try again.");
@@ -142,7 +148,7 @@ const PlaceOrder = () => {
     return (
         <form onSubmit={placeOrder} className="place-order">
             <div className="place-order-left">
-                <p className="title">Delivery Information</p>
+                <h2 >Delivery Information</h2>
                 <div className="multi-fields">
                     <input
                         required
@@ -222,7 +228,7 @@ const PlaceOrder = () => {
                     placeholder="Phone"
                 />
             </div>
-            <div className="div-place-order-right">
+            <div className="place-order-right">
                 <div className="cart-total">
                     <h2>Cart Total</h2>
                     <div>
@@ -237,12 +243,38 @@ const PlaceOrder = () => {
                         </div>
                         <hr />
                         <div className="cart-total-details">
-                            <p>Total</p>
-                            <p>
+                            <p className="total">Total</p>
+                            <p className="total">
                                 $ {getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}
                             </p>
                         </div>
                         <hr />
+                    </div>
+                    <div className="cart-total">
+                        <h2>Payment Method</h2>
+                        <div className="payment-method">
+                            <input
+                                type="radio"
+                                id="COD"
+                                name="paymentMethod"
+                                value="COD"
+                                checked={paymentMethod === "COD"}
+                                onChange={(e) => setPaymentMethod(e.target.value)}
+                            />
+                            <label htmlFor="COD"> COD (Cash on Delivery)</label>
+                        </div>
+                        <div className="payment-method">
+                            <input
+                                type="radio"
+                                id="Online"
+                                name="paymentMethod"
+                                value="Online"
+                                checked={paymentMethod === "Online"}
+                                onChange={(e) => setPaymentMethod(e.target.value)}
+                            />
+                            <label htmlFor="Online"> Online</label>
+                        </div>
+                        
                     </div>
                     <button type="submit">Proceed to Payment</button>
                 </div>

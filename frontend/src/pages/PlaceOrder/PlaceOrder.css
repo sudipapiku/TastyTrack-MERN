@@ -10,10 +10,10 @@
     width: 100%;
     max-width: max(30%,500px);
 }
-.place-order-left title{
+.place-order-left h2{
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .place-order-left input{
@@ -35,6 +35,23 @@
     max-width: max(40%,500px);
 }
 
+.place-order .cart-total .total{
+    font-weight: 700;
+}
+
 .place-order .cart-total button{
-    margin-top: 30px;
+    margin-top: 1px;
+}
+
+.place-order-right .cart-total .payment-method{
+    margin-bottom: 5px;
+    width: 55%;
+    padding: 10px;
+    border: 1px solid tomato;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+
+.place-order-right .cart-total{
+    gap: 15px;
 }
