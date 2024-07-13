@@ -29,6 +29,10 @@ const orderSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
+    paymentStatus:{
+        type: String,
+        default: "Not Paid"
+    },
     orderId: {
         type: String
     },

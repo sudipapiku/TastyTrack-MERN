@@ -13,7 +13,7 @@ const razorpay = new Razorpay({
 
 const placeOrder = async (req, res) => {
 
-    const frontend_url = "http://localhost:5173";
+    const frontend_url = "http://localhost:5174";
 
     try {
         // Save the new order in the database
@@ -61,7 +61,7 @@ const placeOrder = async (req, res) => {
 };
 
 const verifyPayment = async (req, res) => {
-  const frontend_url = "http://localhost:5173";
+  const frontend_url = "http://localhost:5174";
 
   try {
       const { razorpay_payment_id, razorpay_order_id } = req.body;
@@ -75,7 +75,7 @@ const verifyPayment = async (req, res) => {
           // Update order status in your database
           const order = await orderModel.findOneAndUpdate(
               { orderId: razorpay_order_id },
-              { status: 'paid' , payment: true , paymentId: razorpay_payment_id },
+              { paymentStatus: 'paid' , payment: true , paymentId: razorpay_payment_id },
               { new: true }
           );
 
@@ -130,7 +130,33 @@ const userOrders = async (req, res) => {
     console.log(error);
     res.json({ success: false, message: "Internal Server Error" });
   }
-
 }
 
-export { placeOrder, verifyPayment, orderVerify,userOrders };
+// Listing orders for admin panel
+const listOrders = async (req, res) => {
+    try{
+        const orders = await orderModel.find({});
+        res.json({ success: true, data:orders });
+
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: "Internal Server Error" });
+
+    }
+}
+
+// api for updating order status
+const updateStatus = async (req, res) => {
+    try {
+        await orderModel.findOneAndUpdate(
+            { orderId: req.body.orderId }, // Corrected: filter as object
+            { status: req.body.status } // Update operation
+        );
+        res.json({ success: true, message: "Order status updated successfully" });
+    } catch (error) {
+      console.error("Error updating order status:", error);
+      res.json({ success: false, message: "Internal Server Error" });
+    }
+  };
+
+export { placeOrder, verifyPayment, orderVerify,userOrders,listOrders,updateStatus };
