@@ -28,6 +28,12 @@ const orderSchema = new mongoose.Schema({
     payment: {
         type: Boolean,
         default: false
+    },
+    orderId: {
+        type: String
+    },
+    paymentId: {
+        type: String
     }
 });
 
