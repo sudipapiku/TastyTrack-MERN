@@ -13,7 +13,7 @@ const razorpay = new Razorpay({
 
 const placeOrder = async (req, res) => {
 
-    const frontend_url = "http://localhost:5174";
+    const frontend_url = "https://tastytrack-frontend.onrender.com";
 
     try {
         // Save the new order in the database
@@ -61,7 +61,7 @@ const placeOrder = async (req, res) => {
 };
 
 const verifyPayment = async (req, res) => {
-  const frontend_url = "http://localhost:5174";
+  const frontend_url = "https://tastytrack-frontend.onrender.com";
 
   try {
       const { razorpay_payment_id, razorpay_order_id } = req.body;
