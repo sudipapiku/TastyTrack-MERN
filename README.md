@@ -104,6 +104,6 @@ We welcome contributions to improve TastyTrack! Please fork the repository and c
 Distributed under the MIT License. See <code>LICENSE</code> for more information.
 
 # Contact
-**Email:** <a href="mailto:sudipapiku@example.com">sudipapiku@example.com</a>
+**Email:** <a href="mailto:sudipapiku@example.com">sudipapiku@example.com</a> <br>
 **Project Link:** <a href="https://github.com/sudipapiku/TastyTrack-MERN">https://github.com/sudipapiku/TastyTrack-MERN</a>
    
