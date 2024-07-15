@@ -17,7 +17,6 @@ Welcome to TastyTrack, a MERN stack application designed to help users track the
 <ul>
     <li>User Authentication with JWT</li>
     <li>Create, Read, Update, and Delete (CRUD) operations for recipes</li>
-    <li>Meal planning and tracking</li>
     <li>Payment processing with Razorpay</li>
     <li>Responsive design</li>
 </ul>
@@ -74,20 +73,20 @@ RAZORPAY_KEY_SECRET=your_razorpay_key_secret</code></pre>
         </ul>
 
 # Usage
-        <ul>
-            <li>Register a new account or log in with an existing account.</li>
-            <li>Create and manage your recipes.</li>
-            <li>Plan your meals for the week.</li>
-            <li>Process payments using Razorpay.</li>
-        </ul>
+<ul>
+    <li>Register a new account or log in with an existing account.</li>
+    <li>Create and manage your recipes.</li>
+    <li>Plan your meals for the week.</li>
+    <li>Process payments using Razorpay.</li>
+</ul>
 
 # Technologies
-        <ul>
-            <li><strong>Frontend:</strong> React, Redux, Bootstrap</li>
-            <li><strong>Backend:</strong> Node.js, Express.js, MongoDB</li>
-            <li><strong>Authentication:</strong> JWT</li>
-            <li><strong>Payment Gateway:</strong> Razorpay</li>
-        </ul>
+<ul>
+    <li> Frontend: React, CSS</li>
+    <li>Backend: Node.js, Express.js, MongoDB</li>
+    <li>Authentication: JWT</li>
+    <li>Payment Gateway: Razorpay</li>
+</ul>
 
 # Contributing
 We welcome contributions to improve TastyTrack! Please fork the repository and create a pull request with your changes.
