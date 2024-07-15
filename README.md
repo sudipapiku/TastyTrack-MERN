@@ -1,44 +1,42 @@
-<body>
-    <div class="container">
-        <h1>TastyTrack</h1>
-        <p>Welcome to TastyTrack, a MERN stack application designed to help users track their favorite recipes and manage their meal plans efficiently. This project integrates Razorpay for seamless payment processing.</p>
-        
-        <h2>Table of Contents</h2>
-        <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#demo">Demo</a></li>
-            <li><a href="#installation">Installation</a></li>
-            <li><a href="#usage">Usage</a></li>
-            <li><a href="#technologies">Technologies</a></li>
-            <li><a href="#contributing">Contributing</a></li>
-            <li><a href="#license">License</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+# TastyTrack
+Welcome to TastyTrack, a MERN stack application designed to help users track their favorite recipes and manage their meal plans efficiently. This project integrates Razorpay for seamless payment processing.
 
-        <h2 id="features">Features</h2>
-        <ul>
-            <li>User Authentication with JWT</li>
-            <li>Create, Read, Update, and Delete (CRUD) operations for recipes</li>
-            <li>Meal planning and tracking</li>
-            <li>Payment processing with Razorpay</li>
-            <li>Responsive design</li>
-        </ul>
+**Table of Contents**
+<ul>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#technologies">Technologies</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
 
-        <h2 id="demo">Demo</h2>
-        <p>A live demo of the application can be found <a href="#">here</a>.</p>
+# Features
+<ul>
+    <li>User Authentication with JWT</li>
+    <li>Create, Read, Update, and Delete (CRUD) operations for recipes</li>
+    <li>Meal planning and tracking</li>
+    <li>Payment processing with Razorpay</li>
+    <li>Responsive design</li>
+</ul>
 
-        <h2 id="installation">Installation</h2>
-        <p>To run this project locally, follow these steps:</p>
+# Demo
+A live demo of the application can be found <a href="#">here</a>
 
-        <h3>Prerequisites</h3>
-        <ul>
-            <li>Node.js</li>
-            <li>MongoDB</li>
-            <li>Razorpay account</li>
-        </ul>
+# Installation
 
-        <h3>Clone the Repository</h3>
-        <pre><code>git clone https://github.com/sudipapiku/TastyTrack-MERN.git
+To run this project locally, follow these steps
+**Prerequisites**
+<ul>
+    <li>Node.js</li>
+    <li>MongoDB</li>
+    <li>Razorpay account</li>
+</ul>
+
+# Clone the Repository
+<pre><code>git clone https://github.com/sudipapiku/TastyTrack-MERN.git
 cd TastyTrack-MERN</code></pre>
 
         <h3>Backend Setup</h3>
