@@ -39,7 +39,7 @@ To run this project locally, follow these steps
 <pre><code>git clone https://github.com/sudipapiku/TastyTrack-MERN.git
 cd TastyTrack-MERN</code></pre>
 
-        <h3>Backend Setup</h3>
+# Backend Setup
         <ol>
             <li>Navigate to the <code>backend</code> directory:
                 <pre><code>cd backend</code></pre>
