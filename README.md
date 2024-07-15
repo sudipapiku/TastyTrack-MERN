@@ -23,7 +23,7 @@ Welcome to TastyTrack, a MERN stack application designed to help users track the
 </ul>
 
 # Demo
-A live demo of the application can be found <a href="https://tastytrack-frontend.onrender.com" target="_blank">here</a>.
+A live demo of the application can be found <a href="https://tastytrack-frontend.onrender.com" target="_blank">here</a>. <br>
 Admin dashboard can be accessed <a href="https://tastytrack-admin.onrender.com" target="_blank">here</a>.
 
 # Installation
