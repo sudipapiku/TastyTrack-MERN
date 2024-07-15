@@ -28,6 +28,7 @@ A live demo of the application can be found <a href="#">here</a>
 # Installation
 
 To run this project locally, follow these steps
+
 **Prerequisites**
 <ul>
     <li>Node.js</li>
@@ -40,13 +41,12 @@ To run this project locally, follow these steps
 cd TastyTrack-MERN</code></pre>
 
 # Backend Setup
-        <ol>
-            <li>Navigate to the <code>backend</code> directory:
-                <pre><code>cd backend</code></pre>
-            </li>
-            <li>Install the required dependencies:
-                <pre><code>npm install</code></pre>
-            </li>
+<ul>
+<li>Navigate to the <code>backend</code> directory:
+<pre><code>cd backend</code></pre></li>
+<li>Install the required dependencies:
+    <pre><code>npm install</code></pre>
+</li>
             <li>Create a <code>.env</code> file in the <code>backend</code> directory and add the following environment variables:
                 <pre><code>MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
