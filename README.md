@@ -54,7 +54,7 @@ RAZORPAY_KEY_ID=your_razorpay_key_id
 RAZORPAY_KEY_SECRET=your_razorpay_key_secret</code></pre>
             </li>
             <li>Start the backend server:
-                <pre><code>npm start</code></pre>
+                <pre><code>npm run server</code></pre>
             </li>
 </ul>
 
@@ -68,7 +68,7 @@ RAZORPAY_KEY_SECRET=your_razorpay_key_secret</code></pre>
                 <pre><code>REACT_APP_RAZORPAY_KEY_ID=your_razorpay_key_id</code></pre>
             </li>
             <li>Start the frontend development server:
-                <pre><code>npm start</code></pre>
+                <pre><code>npm run dev</code></pre>
             </li>
         </ul>
 
